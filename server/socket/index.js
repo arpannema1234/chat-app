@@ -28,20 +28,21 @@ const io = new Server(server, {
 const onlineUser = new Set();
 
 io.on("connection", async (socket) => {
-  console.log("A user connected");
-  console.log(socket);
+  console.log("connect User ", socket.id);
+
   const token = socket.handshake.auth.token;
 
   //current user details
   const user = await getUserDetailsFromToken(token);
 
   //create a room
-  socket.join(user?._id.toString());
+  socket.join(user?._id?.toString());
   onlineUser.add(user?._id?.toString());
 
   io.emit("onlineUser", Array.from(onlineUser));
 
   socket.on("message-page", async (userId) => {
+    console.log("userId", userId);
     const userDetails = await UserModel.findById(userId).select("-password");
 
     const payload = {
@@ -126,7 +127,10 @@ io.on("connection", async (socket) => {
 
   //sidebar
   socket.on("sidebar", async (currentUserId) => {
+    console.log("current user", currentUserId);
+
     const conversation = await getConversation(currentUserId);
+
     socket.emit("conversation", conversation);
   });
 
@@ -156,6 +160,7 @@ io.on("connection", async (socket) => {
   //disconnect
   socket.on("disconnect", () => {
     onlineUser.delete(user?._id?.toString());
+    console.log("disconnect user ", socket.id);
   });
 });
 
