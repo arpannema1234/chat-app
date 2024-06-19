@@ -28,6 +28,8 @@ const io = new Server(server, {
 const onlineUser = new Set();
 
 io.on("connection", async (socket) => {
+  console.log("A user connected");
+  console.log(socket);
   const token = socket.handshake.auth.token;
 
   //current user details
