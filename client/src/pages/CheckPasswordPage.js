@@ -11,7 +11,7 @@ import { setToken, setUser } from "../redux/userSlice";
 
 const CheckPasswordPage = () => {
   const [data, setData] = useState({
-    password: "",
+    password: "test@123",
     userId: "",
   });
   const navigate = useNavigate();
