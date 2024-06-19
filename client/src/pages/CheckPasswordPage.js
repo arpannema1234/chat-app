@@ -56,8 +56,8 @@ const CheckPasswordPage = () => {
         return toast.error("Error in logging in your account");
       toast.success(response.data.message);
       if (response.data.success) {
-        dispatch(setToken(response?.data?.token));
-        localStorage.setItem("token", response?.data?.token);
+        dispatch(setToken(response.data.token));
+        localStorage.setItem("token", response.data.token);
 
         setData({
           password: "",
