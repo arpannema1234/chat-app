@@ -64,18 +64,23 @@ Before you begin, ensure you have the following installed on your machine:
 3.  Set up Frontend environment variables:
     Create a .env file in the root_directory/client and add the following variables:
 
-        ```env
-        REACT_APP_BACKEND_URL=<your-backend-url>
-        CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
-        CLOUDINARY_API_KEY=<your-cloudinary-api-key>
-        CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>
+    ```env
+    REACT_APP_BACKEND_URL=<your-backend-url>
+    CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
+    CLOUDINARY_API_KEY=<your-cloudinary-api-key>
+    CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>
 
-4.  Set up Frontend environment variables:
+    ```
+
+4.  Set up Backend environment variables:
     Create a .env file in the root_directory/server and add the following variables:
+
     ```env
     FRONTEND_URL = http://localhost:3000
     MONGODB_URI = your_mongo_url
     JWT_SECREAT_KEY = your_JWT_secret_key
+    ```
+
 5.  Run the app:
 
     ```bash
