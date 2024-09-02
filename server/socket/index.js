@@ -28,8 +28,6 @@ const io = new Server(server, {
 const onlineUser = new Set();
 
 io.on("connection", async (socket) => {
-  console.log("connect User ", socket.id);
-
   const token = socket.handshake.auth.token;
 
   //current user details
@@ -127,8 +125,6 @@ io.on("connection", async (socket) => {
 
   //sidebar
   socket.on("sidebar", async (currentUserId) => {
-    console.log("current user", currentUserId);
-
     const conversation = await getConversation(currentUserId);
 
     socket.emit("conversation", conversation);
@@ -160,7 +156,6 @@ io.on("connection", async (socket) => {
   //disconnect
   socket.on("disconnect", () => {
     onlineUser.delete(user?._id?.toString());
-    console.log("disconnect user ", socket.id);
   });
 });
 

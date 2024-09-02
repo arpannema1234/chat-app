@@ -5,7 +5,7 @@ async function checkEmail(request, response) {
     const { email } = request.body;
 
     const checkEmail = await UserModel.findOne({ email }).select("-password");
-    console.log(checkEmail);
+
     if (!checkEmail) {
       return response.status(400).json({
         message: "user not exit",

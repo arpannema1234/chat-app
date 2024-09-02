@@ -18,7 +18,6 @@ const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log("user", user);
   const fetchUserDetails = async () => {
     try {
       const URL = `${process.env.REACT_APP_BACKEND_URL}/api/user-details`;
@@ -28,13 +27,12 @@ const Home = () => {
         withCredentials: true,
       });
 
-      dispatch(setUser(response.data.data));
-      console.log(response);
-      if (response.data.data.logout) {
+      dispatch(setUser(response?.data?.data));
+
+      if (response?.data?.data?.logout || !localStorage.getItem("token")) {
         dispatch(logout());
         navigate("/email");
       }
-      console.log("current user Details", response);
     } catch (error) {
       console.log("error", error);
     }
@@ -53,7 +51,6 @@ const Home = () => {
     });
 
     socketConnection.on("onlineUser", (data) => {
-      console.log(data);
       dispatch(setOnlineUser(data));
     });
 
