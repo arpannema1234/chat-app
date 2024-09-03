@@ -20,6 +20,10 @@ const Home = () => {
 
   const fetchUserDetails = async () => {
     try {
+      if (!localStorage.getItem("token")) {
+        dispatch(logout());
+        navigate("/email");
+      }
       const URL = `${process.env.REACT_APP_BACKEND_URL}/api/user-details`;
       const response = await axios({
         method: "GET",
@@ -29,7 +33,7 @@ const Home = () => {
 
       dispatch(setUser(response?.data?.data));
 
-      if (response?.data?.data?.logout || !localStorage.getItem("token")) {
+      if (response?.data?.data?.logout) {
         dispatch(logout());
         navigate("/email");
       }
