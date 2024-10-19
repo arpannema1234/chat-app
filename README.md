@@ -8,7 +8,7 @@ Welcome to the Chatting App! This project is a simple, user-friendly chat applic
 
 # Password Page
 
-![image](https://github.com/user-attachments/assets/0f54a983-e0dc-4a96-b1a4-832ff377a179)
+![image](https://github.com/user-attachments/assets/6d7430f0-5a88-49b7-b084-09596ad574ba)
 
 # Chat Page
 
