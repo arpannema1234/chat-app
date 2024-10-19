@@ -6,6 +6,27 @@ Welcome to the Chatting App! This project is a simple, user-friendly chat applic
 
 ![image](https://github.com/user-attachments/assets/804ef7a4-68cb-44cb-a6ee-52457b77116e)
 
+# Password Page
+
+![image](https://github.com/user-attachments/assets/0f54a983-e0dc-4a96-b1a4-832ff377a179)
+
+# Chat Page
+
+![image](https://github.com/user-attachments/assets/d1ed0971-af54-4b16-9e29-9792702ebe38)
+
+# Chats
+
+![image](https://github.com/user-attachments/assets/2944a7cb-08c6-4e8b-9d06-d6d7e5d7fa89)
+
+# Search User
+
+![image](https://github.com/user-attachments/assets/c5496a96-84f5-40df-bb2f-747c1d049be7)
+
+# Profile Page
+
+![image](https://github.com/user-attachments/assets/030c7d7d-01fa-442d-a922-351dde414a30)
+
+
 ## Table of Contents
 
 - [Features](#features)
