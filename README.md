@@ -2,6 +2,10 @@
 
 Welcome to the Chatting App! This project is a simple, user-friendly chat application that allows users to register, log in, and communicate with each other in real-time. The app is built using modern web development technologies and provides a seamless chat experience.
 
+# Login Page
+
+![image](https://github.com/user-attachments/assets/804ef7a4-68cb-44cb-a6ee-52457b77116e)
+
 ## Table of Contents
 
 - [Features](#features)
