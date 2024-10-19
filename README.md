@@ -20,7 +20,7 @@ Welcome to the Chatting App! This project is a simple, user-friendly chat applic
 
 # Search User
 
-![image](https://github.com/user-attachments/assets/c5496a96-84f5-40df-bb2f-747c1d049be7)
+![image](https://github.com/user-attachments/assets/88da2a0c-3995-4b9e-8503-a33099958491)
 
 # Profile Page
 
